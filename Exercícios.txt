@@ -1,0 +1,29 @@
+Soma de Números Pares: Escreva uma função que recebe um número inteiro n e retorna a soma de todos os números pares de 1 a n.
+
+Verificar Palíndromo: Crie uma função que verifica se uma string é um palíndromo (ou seja, se pode ser lida da mesma forma de trás para frente).
+
+Fatorial: Escreva uma função para calcular o fatorial de um número inteiro n.
+
+Contagem de Palavras: Crie uma função que conte o número de palavras em uma string.
+
+Maior Elemento: Escreva uma função que encontre o maior elemento em uma lista de números.
+
+Inverter uma String: Implemente uma função para inverter uma string.
+
+Números Primos: Crie uma função que verifica se um número é primo.
+
+Ordenação: Escreva um algoritmo de ordenação, como o Bubble Sort, para ordenar uma lista de números.
+
+Média de uma Lista: Calcule a média de uma lista de números.
+
+Contagem de Vogais: Crie uma função que conte o número de vogais em uma string.
+
+Fibonacci: Escreva uma função para gerar os primeiros n termos da sequência de Fibonacci.
+
+Verificar Anagramas: Implemente uma função que verifique se duas strings são anagramas uma da outra.
+
+Cálculo de Juros: Crie uma função que calcule o montante total após n anos de um valor principal com uma taxa de juros fixa.
+
+Busca Binária: Implemente uma função de busca binária para encontrar um elemento em uma lista ordenada.
+
+Soma de Matrizes: Escreva uma função que some duas matrizes (listas de listas) e retorne a matriz resultante.

@@ -1,33 +1,48 @@
+def da_boas_vindas
+  puts "Bem-vindo ao jogo da adivinhação"
+  puts "Qual é o seu nome?"
+  nome = gets
+  puts "Começaremos o jogo para você, " + nome
+end
 
-puts "Bem-vindo ao jogo da adivinhação"
-puts "Qual é o seu nome?"
-nome = gets
-puts "\n\n\n\n\n\n"
-puts "Começaremos o jogo para você, " + nome
-puts "Escolhendo um número secreto entre 0 e 200..."
-numero_secreto = 175
-puts "Escolhido... que tal adivinhar hoje nosso número secreto?"
-puts "\n\n\n\n\n\n"
-puts "Tentativa 1"
-puts "Entre com o número"
-chute = gets
-puts "Será que acertou? Você chutou " + chute
+def sorteia_numero_secreto
+  puts "Escolhendo um número secreto entre 0 e 200..."
+  sorteado = 175
+  puts "Escolhido... que tal adivinhar hoje nosso número secreto?"
+  return sorteado
+end
 
-acertou = numero_secreto == chute.to_i
+def pede_um_numero(tentativa, limiteTentativa)
+  puts "Tentativa " + tentativa.to_s + " de " + limiteTentativa.to_s
+  puts "Entre com o número"
+  chute = gets
+  puts "Será que acertou? Você chutou " + chute
+  return chute
+end
 
-# Comentando aqui!
+da_boas_vindas
 
-=begin
- Comentando aqui!
- E aqui tbm!
-=end
+puts "\n\n\n"
 
-if acertou == true
-  puts "Acertou!"
-else
-  if numero_secreto > chute.to_i
-    puts "O número é maior"
+numero_secreto = sorteia_numero_secreto
+
+puts "\n\n\n"
+
+limiteTentativa = 5
+
+for tentativa in 1..limiteTentativa
+  chute = pede_um_numero(tentativa, limiteTentativa)
+
+  acertou = numero_secreto == chute.to_i
+
+  if acertou == true
+    puts "Acertou!"
+    break
   else
-    puts "O número é menor"
+    if numero_secreto > chute.to_i
+      puts "O número é maior"
+    else
+      puts "O número é menor"
+    end
   end
 end
