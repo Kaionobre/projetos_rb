@@ -51,9 +51,16 @@ numero_secreto = sorteia_numero_secreto
 puts "\n\n"
 
 limiteTentativa = 5
+chutes = []
+totao_de_chutes = 0
+
 
 for tentativa in 1..limiteTentativa
-  chute = pede_um_numero(tentativa, limiteTentativa)
+  chute = pede_um_numero(chutes ,tentativa, limiteTentativa)
+
+  chutes[total_de_chutes] = chute
+  total_de_chutes = total_de_chutes + 1
+
   if verifica_se_acertou(numero_secreto, chute)
     break
   end
