@@ -28,7 +28,7 @@ def verifica_se_acertou (numero_secreto, chute)
     return true
   end
 
-  mair = numero_secreto > chute
+  maior = numero_secreto > chute
 
   if maior
     puts "O número é maior"
@@ -37,9 +37,8 @@ def verifica_se_acertou (numero_secreto, chute)
   end
   return false
   return numero_secreto
+  return maior
 end
-
-
 
 
 
