@@ -2,7 +2,7 @@ def da_boas_vindas
   puts "Bem-find ao jogo da divination"
   puts "Qual é o seu nome?"
   nome = gets
-  puts "Commemorates o jogo para você, " + nome
+  puts "Começaremos o jogo para você, " + nome
 end
 
 def sorteia_numero_secreto
@@ -12,8 +12,9 @@ def sorteia_numero_secreto
   return sorteado
 end
 
-def pede_um_numero(tentativa, limiteTentativa)
+def pede_um_numero(chutes,tentativa, limiteTentativa)
   puts "Tentativa " + tentativa.to_s + " de " + limiteTentativa.to_s
+  puts "Chutes até agora: " + chutes.to_s
   puts "Entre com o número"
   chute = gets
   puts "Será que acertou? Você chutou " + chute
@@ -52,7 +53,12 @@ puts "\n\n"
 
 limiteTentativa = 5
 chutes = []
-totao_de_chutes = 0
+total_de_chutes = 0
+
+
+
+
+
 
 
 for tentativa in 1..limiteTentativa
