@@ -1,8 +1,6 @@
 
 Verificar Palíndromo: Crie uma função que verifica se uma string é um palíndromo (ou seja, se pode ser lida da mesma forma de trás para frente).
 
-Fatorial: Escreva uma função para calcular o fatorial de um número inteiro n.
-
 Contagem de Palavras: Crie uma função que conte o número de palavras em uma string.
 
 Maior Elemento: Escreva uma função que encontre o maior elemento em uma lista de números.
