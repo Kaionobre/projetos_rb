@@ -1,4 +1,3 @@
-Soma de Números Pares: Escreva uma função que recebe um número inteiro n e retorna a soma de todos os números pares de 1 a n.
 
 Verificar Palíndromo: Crie uma função que verifica se uma string é um palíndromo (ou seja, se pode ser lida da mesma forma de trás para frente).
 
