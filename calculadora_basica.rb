@@ -1,42 +1,40 @@
 # calculadora ( + , - , / , *)
+# .chomp Remove o caractere de quebra de linha (\n)
 
 def calculadora_basica
-  puts "Vou calcular todo para você, digite o primeiro número: "
-  entrada_1 = gets
-  "\n"
+  puts "Vou calcular tudo para você. Digite o primeiro número:"
+  entrada_1 = gets.chomp
 
-  puts "Digite o segundo número: "
-  entrada_2 = gets
-  "\n"
+  puts "Digite a operação desejada (+, -, /, *):"
+  entrada_operador = gets.chomp
 
+  puts "Digite o segundo número:"
+  entrada_2 = gets.chomp
 
-  puts "Digite a operação desejada dentro dessa lista [+ , - , / , *]"
-  entrada_operador = gets
-  "\n"
+  case entrada_operador
+  when "+"
+    resultado = entrada_1.to_f + entrada_2.to_f # Usar to_f para permitir números decimais
+    puts "Resultado: #{resultado}"
 
-  if entrada_operador == "*"
-    resultado = entrada_1 * entrada_2
-    puts resultado.to_i
+  when "-"
+    resultado = entrada_1.to_f - entrada_2.to_f
+    puts "Resultado: #{resultado}"
 
-  elsif entrada_operador == "/"
-    resultado = entrada_1 / entrada_2
-    puts resultado.to_i
-  end
+  when "*"
+    resultado = entrada_1.to_f * entrada_2.to_f
+    puts "Resultado: #{resultado}"
 
-  elsif entrada_operador == "+"
-    resultado = entrada_1 + entrada_2
-    puts resultado.to_i
-  end
-
-  elsif entrada_operador == "-"
-    resultado = entrada_1 - entrada_2
-    puts resultado.to_i
-  end
+  when "/"
+    if entrada_2.to_f != 0
+      resultado = entrada_1.to_f / entrada_2.to_f
+      puts "Resultado: #{resultado}"
+    else
+      puts "Erro: Divisão por zero!"
+    end
 
   else
-    puts "Resultado inválido"
+    puts "Operação inválida!"
   end
 end
-
 
 calculadora_basica

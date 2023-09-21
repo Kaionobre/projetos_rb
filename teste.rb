@@ -1,17 +1,37 @@
-# imprime o indice 0
-#puts chute [0]
+def calculadora_basica
+  puts "Vou calcular tudo para você. Digite o primeiro número:"
+  entrada_1 = gets.chomp # Remove o caractere de quebra de linha (\n)
 
-# atribui um valor no indice selecionado
-#puts chute [0] = 100
+  puts "Digite o segundo número:"
+  entrada_2 = gets.chomp # Remove o caractere de quebra de linha (\n)
 
+  puts "Digite a operação desejada (+, -, /, *):"
+  entrada_operador = gets.chomp # Remove o caractere de quebra de linha (\n)
 
+  case entrada_operador
+  when "+"
+    resultado = entrada_1.to_f + entrada_2.to_f # Usar to_f para permitir números decimais
+    puts "Resultado: #{resultado}"
 
-chutes = []
+  when "-"
+    resultado = entrada_1.to_f - entrada_2.to_f
+    puts "Resultado: #{resultado}"
 
-chute = 100
-tentativa = 1
-chutes[tentativa - 1] = chute
+  when "*"
+    resultado = entrada_1.to_f * entrada_2.to_f
+    puts "Resultado: #{resultado}"
 
-for contador in 0..(tentativa - 1)
-  puts "Chute: " + chutes[contador].to_s
+  when "/"
+    if entrada_2.to_f != 0
+      resultado = entrada_1.to_f / entrada_2.to_f
+      puts "Resultado: #{resultado}"
+    else
+      puts "Erro: Divisão por zero!"
+    end
+
+  else
+    puts "Operação inválida!"
+  end
 end
+
+calculadora_basica

@@ -9,7 +9,7 @@ def soma_numeros_pares
 
   par = 0
 
-  while numero_inicial <= numero.to_i
+  while numero_inicial <= numero.to_s
     numero_inicial += 1
 
     if numero_inicial % 2 == 0
@@ -20,7 +20,7 @@ def soma_numeros_pares
 
   end
 
-  puts "A soma de todos os números pares de " +numero.to_s+ "é "+par.to_s
+  puts "A soma de todos os números pares de " +numero.to_s+ "é "+par.to_i
 end
 
 soma_numeros_pares
