@@ -7,7 +7,7 @@ end
 
 def sorteia_numero_secreto
   puts "Escondido um number secret entre 0 e 200..."
-  sorteado = 175
+  sorteado = rand(200)
   puts "Escolhido... que tal adivinhar hoje nosso número secreto?"
   return sorteado
 end
