@@ -1,8 +1,6 @@
 
 # Jogo da forca
 
-
-
 def sorteia_palavra
   chaves_sorteio = rand(4)
   puts "Esse é o indice randônico #{chaves_sorteio}"
@@ -27,11 +25,12 @@ def seleciona_palavra(chaves_sorteio)
   return palavra_sorteada
 end
 
-def mostra_palavra(palavra_sorteada)
+def mostra_palavra(chaves_sorteio ,palavra_sorteada)
   tamanho_da_palavra = palavra_sorteada.size
+  puts "O tamanho da palavra é #{tamanho_da_palavra}"
   return tamanho_da_palavra
 end
 
-sorteia_palavra
 
-seleciona_palavra(sorteia_palavra)
+
+mostra_palavra = seleciona_palavra(sorteia_palavra)
