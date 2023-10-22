@@ -1,14 +1,8 @@
+# Contagem de Palavras: Crie uma função que conte o número de palavras em uma string.
 
-def fatorial_numero_inteiro
-  numero = gets
+def contagem_de_palavras
+  string = "Banana"
 
-  resultado = numero * (numero.to_s - 1)
+  count string
 
-  puts resultado
-# calcular o numero * ele - 1 ex:
 end
-
-
-
-
-fatorial_numero_inteiro

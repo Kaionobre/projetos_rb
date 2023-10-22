@@ -13,7 +13,6 @@ Ordenação: Escreva um algoritmo de ordenação, como o Bubble Sort, para orden
 
 Média de uma Lista: Calcule a média de uma lista de números.
 
-Contagem de Vogais: Crie uma função que conte o número de vogais em uma string.
 
 Fibonacci: Escreva uma função para gerar os primeiros n termos da sequência de Fibonacci.
 

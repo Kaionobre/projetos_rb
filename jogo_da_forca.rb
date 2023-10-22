@@ -1,36 +1,85 @@
-
-# Jogo da forca
-
-def sorteia_palavra
-  chaves_sorteio = rand(4)
-  puts "Esse é o indice randônico #{chaves_sorteio}"
-  return chaves_sorteio
+def da_boas_vindas
+  puts "Olá, vamos começar o jogo, me diga o seu nome."
+  nome = gets.strip
+  puts "\n \n"
+  puts "Vamos começar o jogo, #{nome}!"
+  return nome
 end
 
-def seleciona_palavra(chaves_sorteio)
 
-  palavras = ["Melancia", "Galinha", "Carro", "Computador"]
+def escolhe_palavra_secreta
+  puts "Escolhendo uma palavra secreta..."
+  puts "\n"
+  palavra_secreta = "programador"
+  puts "Palavra secreta com #{palavra_secreta.size} letas... boa sorte!"
+  puts "\n"
+  return palavra_secreta
+end
 
-  case chaves_sorteio
-  when 0
-    palavra_sorteada = palavras[0]
-  when 1
-    palavra_sorteada = palavras[1]
-  when 2
-    palavra_sorteada = palavras[2]
-  when 3
-    palavra_sorteada = palavras[3]
+
+def nao_quer_jogar?
+  puts "Deseja jogar novamente? (S/N)"
+  quero_jogar = gets.strip
+  nao_quero_jogar = quero_jogar.upcase == "N"
+end
+
+
+def pede_um_chute(chutes ,erros)
+  puts "\n \n"
+  puts "Erro até agora: #{erros}"
+  puts "Chutes até agora #{chutes}"
+  puts "Entre com uma letra ou uma palavra"
+  chute = gets.strip
+  puts "Será que acertou? Você chutou #{chute}"
+  return chute
+end
+
+def joga(nome)
+  palavra_secreta = escolhe_palavra_secreta
+
+  erros = 0
+  chutes = []
+  pontos_ate_agora = 0
+
+  while erros < 5
+    chute = pede_um_chute chutes, erros
+    chutes << chute
+
+    chutou_uma_letra = chute.size == 1
+    if chutou_uma_letra
+      letra_procurada = chute[0]
+      total_encontrado = 0
+
+      for i in 0..(palavra_secreta.size-1)
+        if palavra_secreta [i] == letra_procurada
+          total_encontrado +=1
+        end
+      end
+
+      if total_encontrado == 0
+        puts "Letra não encontrada"
+        erros +=1
+      else
+        puts "Letra encontrada #{total_encontrado} vezes."
+      end
+
+    else
+      acertou = chute == palavra_secreta
+      if acertou
+        puts "Parabéns! Acertou!"
+        pontos_ate_agora += 100
+        break
+      else
+        puts "Que pena... Errou"
+        pontos_ate_agora -= 30
+        erros += 1
+    end
   end
-  puts palavra_sorteada
-  return palavra_sorteada
 end
 
-def mostra_palavra(chaves_sorteio ,palavra_sorteada)
-  tamanho_da_palavra = palavra_sorteada.size
-  puts "O tamanho da palavra é #{tamanho_da_palavra}"
-  return tamanho_da_palavra
+  puts "Você ganhou #{pontos_ate_agora} pontos!"
 end
 
-
-
-mostra_palavra = seleciona_palavra(sorteia_palavra)
+nome = da_boas_vindas
+palavra_secreta = escolhe_palavra_secreta
+joga nome
