@@ -1,0 +1,10 @@
+Algoritmo
+Variável
+Compilação
+Depuração
+Linguagem de programação
+Loop
+Função
+Classe
+Método
+Estrutura de dados
